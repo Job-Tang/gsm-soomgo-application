@@ -21,6 +21,8 @@ public class FieldAdapter : RecyclerView.Adapter<FieldViewHolder>() {
 
     override fun onBindViewHolder(holder: FieldViewHolder, position: Int) {
         holder.bind(this.modelList[position])
+
+
     }
 
     // 외부에서 데이터 넘기기
