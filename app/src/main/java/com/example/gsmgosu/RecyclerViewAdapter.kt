@@ -44,7 +44,7 @@ class RecyclerViewAdapter(val context:Context, val dataList:ArrayList<InitData>)
             itemView.setOnClickListener {
                 //여기서 토스터를 어떻게?
                 //Toast.makeText(itemView.context, "아이템 '${data.name}'를 클릭했습니다.", Toast.LENGTH_LONG).show()
-                val intent = Intent(itemView.context,ChooseField::class.java)
+                val intent = Intent(itemView.context,SelectGrade::class.java)
                 intent.putExtra("field", data.name)
                 itemView.context.startActivity(intent)
 
