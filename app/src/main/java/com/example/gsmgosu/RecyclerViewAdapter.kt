@@ -14,9 +14,7 @@ import kotlinx.android.synthetic.main.layout_mainicon.view.*
 
 class RecyclerViewAdapter(val context:Context, val dataList:ArrayList<InitData>):RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
 
-    fun onClick(){
 
-    }
     //아이템의 갯수
     override fun getItemCount(): Int {
         return dataList.size
@@ -36,6 +34,7 @@ class RecyclerViewAdapter(val context:Context, val dataList:ArrayList<InitData>)
     class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
         fun bindItems(data : InitData){
             //이미지표시
+
             Glide.with(itemView.context).load(data.imageResource)
                 .into(itemView.recyclerView_ImageView)
             itemView.recyclerView_TextView.text = data.name

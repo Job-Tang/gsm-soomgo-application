@@ -46,9 +46,6 @@ class ChooseField : AppCompatActivity() {
         FieldModel("ETC", R.drawable.chooseetc),
     )
 
-
-
-
     var modelList = ArrayList<FieldModel>()
 
 
