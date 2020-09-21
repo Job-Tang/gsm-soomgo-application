@@ -41,7 +41,9 @@
         android:layout_gravity="center"
         android:src="@drawable/boy"
         app:civ_border_color="#FFffff"
-        app:civ_border_width="2dp"></de.hdodenhof.circleimageview.CircleImageView>
+        app:civ_border_width="2dp">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
     <TextView
         android:id="@+id/student_impo"
         android:layout_width="match_parent"

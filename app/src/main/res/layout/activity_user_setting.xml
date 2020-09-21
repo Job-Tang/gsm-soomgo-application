@@ -15,10 +15,10 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <ImageView
-            android:id="@+id/back"
-            android:layout_width="50dp"
-            android:layout_height="40dp"
-            android:layout_margin="15dp"
+            android:id="@+id/myPage_Back"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="15dp"
             android:src="@drawable/back_space" />
 
         <com.google.android.material.textview.MaterialTextView
@@ -36,6 +36,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <LinearLayout
+            android:id="@+id/myPage_MyProfile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -58,6 +59,7 @@
                 android:layout_margin="20dp"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/myPage_LogOut"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -88,6 +90,7 @@
         android:background="#ffffff"
         android:orientation="vertical">
         <LinearLayout
+            android:id="@+id/myPage_DeleteUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
