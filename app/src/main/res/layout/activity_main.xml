@@ -61,7 +61,7 @@
             android:layout_marginTop="30dp"
             android:fontFamily="@font/roboto"
             android:gravity="top"
-            android:text="매칭현황"
+            android:text="게시판"
             android:textAppearance="@style/gsm_"
             android:textStyle="bold" />
 
