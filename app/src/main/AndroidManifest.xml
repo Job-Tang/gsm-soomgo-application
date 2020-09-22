@@ -10,11 +10,12 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RegisterMaster"></activity>
+        <activity android:name=".RegisterMaster" />
         <activity android:name=".LoginActivity" />
-        <activity
-            android:name=".UserSetting"
-            android:screenOrientation="portrait" />
+        <activity android:name=".UserSetting" />
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".In_Chat_Activity" />
         <activity
             android:name=".SelectGrade"
             android:screenOrientation="portrait" />
@@ -27,9 +28,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:screenOrientation="portrait" />
+        <activity android:name=".Chat_Room_Activity" />
+
     </application>
 
 </manifest>
