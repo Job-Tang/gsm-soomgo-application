@@ -41,6 +41,11 @@ class MainActivity : AppCompatActivity() {
         init()
 
         mypage_Profile.setOnClickListener { startActivity(Intent(this, UserSetting::class.java)) }
+        gosu.setOnClickListener {
+            val intent = Intent(this, RegisterMaster::class.java)
+            intent.putExtra("token",getData().toString())
+            startActivity(intent)
+        }
         Log.d("TOKEN", getData().toString())
     }
 

@@ -1,5 +1,6 @@
 package com.example.gsmgosu
 
+import android.content.Context
 import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -103,7 +104,9 @@ class RegisterMaster : AppCompatActivity() {
                     RetrofitService().getUserAPI().patchUser(token, UserInfo(response.body()!!.email,response.body()!!.name,response.body()!!.image,grade,classNumber,number,selectMajor,response.body()!!.introduce)).enqueue(object : Callback<Token>{
                         override fun onFailure(call: Call<Token>, t: Throwable) {}
 
-                        override fun onResponse(call: Call<Token>, response: Response<Token>) {}
+                        override fun onResponse(call: Call<Token>, response: Response<Token>) {
+                            saveData(response.body()!!.access_token)
+                        }
 
                     })
                 }
@@ -154,5 +157,11 @@ class RegisterMaster : AppCompatActivity() {
 
 
         spinner_field.adapter = ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item, major)
+    }
+    fun saveData(token : String){
+        val sharedPreference = getSharedPreferences("access_token", Context.MODE_PRIVATE)
+        val editor = sharedPreference.edit()
+        editor.putString("access_token",token)
+        editor.apply()
     }
 }
