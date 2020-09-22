@@ -2,6 +2,7 @@ package com.example.gsmgosu
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +12,7 @@ import android.widget.TextView
 import com.example.gsmgosu.retrofit.data.user.Skill
 import com.example.gsmgosu.retrofit.data.user.UserInfo
 import kotlinx.android.synthetic.main.activity_main.view.*
+import kotlinx.android.synthetic.main.student_impo.view.*
 
 class MyCustomAdapter(context: Context, dataList : ArrayList<UserInfo>) : BaseAdapter() {
     private val mContext : Context = context
@@ -33,6 +35,12 @@ class MyCustomAdapter(context: Context, dataList : ArrayList<UserInfo>) : BaseAd
         }
 
         studentSkills.text = skill
+
+        rowMain.matching.setOnClickListener{
+            val intent = Intent(mContext, Chat_Room_Activity::class.java)
+            intent.putExtra("userName", mDataList[position].name)
+            mContext.startActivity(intent)
+        }
 
         return rowMain
     }

@@ -48,7 +48,7 @@ public class LoginActivity  extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login);
-        login = findViewById(R.id.login_google);
+        login = findViewById(R.id.logiin_google);
         mAuth = FirebaseAuth.getInstance();
         ct = this;
 

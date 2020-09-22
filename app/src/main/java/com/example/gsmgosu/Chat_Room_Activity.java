@@ -36,6 +36,10 @@ public class Chat_Room_Activity extends AppCompatActivity {
         user_next = (Button) findViewById(R.id.user_next);
         chat_list = (ListView) findViewById(R.id.chat_list);
 
+        Intent inIntent = getIntent();
+
+        user_chat.setText(inIntent.getStringExtra("userName"));
+
         user_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

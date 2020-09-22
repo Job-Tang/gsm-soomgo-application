@@ -43,12 +43,13 @@
         app:layout_constraintStart_toEndOf="@+id/imageView2" />
 
     <Button
-        android:background="#F9F6F6"
+        android:id="@+id/matching"
         android:layout_width="50dp"
         android:layout_height="30dp"
+        android:layout_marginEnd="20dp"
+        android:background="#F9F6F6"
         android:text="매칭"
         android:textColor="#959595"
-        android:layout_marginEnd="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
