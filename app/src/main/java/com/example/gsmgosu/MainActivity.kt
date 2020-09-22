@@ -63,7 +63,5 @@ class MainActivity : AppCompatActivity() {
         matchingStatus_RecyclerView.layoutManager = linearLayoutManager
         val matchingAdapter = MatchingStatusAdapter(applicationContext, matchingStatusData)
         matchingStatus_RecyclerView.adapter = matchingAdapter
-
-
     }
 }
