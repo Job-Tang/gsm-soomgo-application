@@ -2,6 +2,7 @@ package com.example.gsmgosu.retrofit.api
 
 import com.example.gsmgosu.retrofit.data.Message
 import com.example.gsmgosu.retrofit.data.board.Board
+import com.example.gsmgosu.retrofit.data.board.PatchBoard
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -20,10 +21,7 @@ interface BoardAPI {
     fun patchBoard(
         @Query("access_token") access_token: String,
         @Query("id") id : String,
-        @Field("grade") grade : Int,
-        @Field("postTitle") postTitle : String,
-        @Field("postContent") postContent : String,
-        @Field("publisher") publisher : String
+        @Body patchBoard: PatchBoard
     ) : Call<Message>
 
     @DELETE("board")

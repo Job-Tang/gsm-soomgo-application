@@ -10,3 +10,9 @@ data class UserInfo(
     val skills : ArrayList<String>,
     val introduce : String
 )
+
+data class User(
+    val email: String,
+    val name: String,
+    val image: String
+)
