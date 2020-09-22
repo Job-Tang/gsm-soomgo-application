@@ -2,7 +2,6 @@ package com.example.gsmgosu.retrofit.api
 
 import com.example.gsmgosu.retrofit.data.Message
 import com.example.gsmgosu.retrofit.data.user.Token
-import com.example.gsmgosu.retrofit.data.user.User
 import com.example.gsmgosu.retrofit.data.user.UserInfo
 import retrofit2.Call
 import retrofit2.http.*
@@ -21,7 +20,7 @@ interface UserAPI {
     @FormUrlEncoded
     @POST("user")
     fun setUserInfo(
-        @Body user : User
+        @Body user : UserInfo
     ) : Call<Token>
     @PATCH("user")
     fun patchUser(
