@@ -32,8 +32,11 @@ class RegisterMaster : AppCompatActivity() {
 
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 if(p2 != 0) {
-                    selectMajor.add(major[p2])
-                    adapter.notifyDataSetChanged()
+                    if(!selectMajor.contains(major[p2])){
+                        selectMajor.add(major[p2])
+                        adapter.notifyDataSetChanged()
+                    }
+
                 }
             }
 
