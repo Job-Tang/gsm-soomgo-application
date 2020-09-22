@@ -26,7 +26,25 @@
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
             android:src="@drawable/app_logo_main" />
-
+        <ImageView
+            android:id="@+id/mypage_Profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_baseline_group_24"
+            android:layout_marginLeft="320dp"/>
+        <TextView
+            android:id="@+id/gosu"
+            android:layout_width="60dp"
+            android:textSize="8dp"
+            android:layout_height="30dp"
+            android:text="고수등록"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/cancel_button"
+            android:layout_marginLeft="250dp"/>
         <TextView
             android:id="@+id/gsm_"
             android:layout_width="wrap_content"
@@ -78,10 +96,19 @@
             android:layout_marginTop="10dp"
             android:paddingVertical="10dp"
             android:background="#FFF3F3">
-
-
         </androidx.recyclerview.widget.RecyclerView>
 
+        <Button
+            android:id="@+id/writeNotice"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:background="@drawable/cancel_button"
+            android:text="게시판 작성"
+            android:textColor="#ffffff"
+            android:textSize="8dp"
+            android:layout_below="@id/matchingStatus_RecyclerView"
+            android:layout_marginLeft="270dp"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 </layout>
