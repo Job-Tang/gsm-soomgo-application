@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterMaster">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/app_logo_main"
+        android:layout_marginLeft="16dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="100dp"
+        android:text="당신의 정보와\n분야를 골라주세요!"
+        android:textColor="#000000"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_grade"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="200dp"
+        android:background="#F4F4F4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_class"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="#F4F4F4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_grade" />
+
+    <Spinner
+        android:id="@+id/spinner_number"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="#F4F4F4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_class" />
+
+    <Spinner
+        android:id="@+id/spinner_field"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="#F4F4F4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_number" />
+
+    <Button
+        android:id="@+id/ok_button"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ok_button"
+        android:text="확인"
+        android:textColor="#ffffff"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/major_list" />
+
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/cancel_button"
+        android:text="취소"
+        android:textColor="#ffffff"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ok_button"
+        app:layout_constraintTop_toBottomOf="@+id/major_list" />
+
+    <ListView
+        android:id="@+id/major_list"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_field" />
+</androidx.constraintlayout.widget.ConstraintLayout>
