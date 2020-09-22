@@ -1,14 +1,16 @@
 package com.example.gsmgosu
 
 import android.content.Intent
-import android.media.Image
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 
-data class InitData(val imageResource : Int, val name: String)
+
+data class Auth(val auth: FirebaseAuth)
+data class InitData(val imageResource: Int, val name: String)
 //data class MatchingStatusData(val name: String, val image: Image, val grade: String, val introduce: String)
 data class MatchingStatusData(val name: String, val grade: Int, val introduce: String)
 
@@ -34,6 +36,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         init()
+
+        mypage_Profile.setOnClickListener { startActivity(Intent(this, UserSetting::class.java)) }
     }
 
     private fun init() {
@@ -48,6 +52,7 @@ class MainActivity : AppCompatActivity() {
         matchingStatus_RecyclerView.layoutManager = linearLayoutManager
         val matchingAdapter = MatchingStatusAdapter(applicationContext, matchingStatusData)
         matchingStatus_RecyclerView.adapter = matchingAdapter
+
 
 
     }

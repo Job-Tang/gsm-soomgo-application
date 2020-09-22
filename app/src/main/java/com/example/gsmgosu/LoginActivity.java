@@ -27,11 +27,11 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class LoginActivity  extends AppCompatActivity {
+
+public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth = null;
     public static String jsonResult = "";
     private GoogleSignInClient mGoogleSignInClient;
@@ -51,6 +51,11 @@ public class LoginActivity  extends AppCompatActivity {
         login = findViewById(R.id.logiin_google);
         mAuth = FirebaseAuth.getInstance();
         ct = this;
+
+
+        //LocalDataPreservation.setData["Auth"] = Auth(mAuth)
+
+
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -160,7 +165,7 @@ public class LoginActivity  extends AppCompatActivity {
 
     private void updateUI(FirebaseUser user) { //update ui code here
         if (user != null) {
-            Intent intent = new Intent(this, ChatActivity.class);
+            Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
             finish();
         }
