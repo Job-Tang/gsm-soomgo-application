@@ -26,7 +26,14 @@ interface UserAPI {
     ) : Call<Token>
     @PATCH("user")
     fun patchUser(
-        @Query("access_token") access_token: String
+        @Query("access_token") access_token: String,
+        @Field("email") email: String,
+        @Field("name") name: String,
+        @Field("image") image: String,
+        @Field("grade") grade : Int,
+        @Field("student_class") student_class : Int,
+        @Field("student_number") student_number : Int,
+        @Field("introduce") introduce : String
     ) : Call<Token>
     @DELETE("user")
     fun deleteUser(
