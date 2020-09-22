@@ -4,15 +4,13 @@ data class UserInfo(
     val email : String,
     val name : String,
     val image : String,
-    val grade : Int,
-    val student_class : Int,
-    val student_number : Int,
-    val skills : ArrayList<String>,
-    val introduce : String
+    val grade : Int? = null,
+    val student_class : Int? = null,
+    val student_number : Int? = null,
+    val skills : List<Skill>? = null,
+    val introduce : String? = null
 )
 
-data class User(
-    val email: String,
-    val name: String,
-    val image: String
+data class Skill(
+    val skill: String
 )
