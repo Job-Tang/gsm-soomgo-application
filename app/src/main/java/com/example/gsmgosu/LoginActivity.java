@@ -114,7 +114,7 @@ public class LoginActivity extends AppCompatActivity {
                             UserPhoto = uri.toString();
 
                             JSONTask jt = new JSONTask();
-                            jt.execute("http://54.210.142.125:7777/user");
+                            jt.execute(BuildConfig.BASE_URL + "user");
 
                             Handler hd = new Handler();
                             hd.postDelayed(new LoginActivity.splashhandler(jt), 2000);

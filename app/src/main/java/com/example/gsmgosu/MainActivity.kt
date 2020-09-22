@@ -1,7 +1,9 @@
 package com.example.gsmgosu
 
 import android.content.Intent
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,6 +17,7 @@ data class InitData(val imageResource: Int, val name: String)
 data class MatchingStatusData(val name: String, val grade: Int, val introduce: String)
 
 class MainActivity : AppCompatActivity() {
+
     var initDataList = arrayListOf<InitData>(
         InitData(R.drawable.icon_mobile_app, "모바일 앱"),
         InitData(R.drawable.icon_design, "디자이너"),
@@ -38,6 +41,7 @@ class MainActivity : AppCompatActivity() {
         init()
 
         mypage_Profile.setOnClickListener { startActivity(Intent(this, UserSetting::class.java)) }
+        Log.d("TOKEN", getData().toString())
     }
 
     private fun init() {
@@ -56,4 +60,10 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+    private fun getData() : String? {
+        val pef = getPreferences(Context.MODE_PRIVATE)
+        return pef.getString("access_token", "")
+    }
+
 }

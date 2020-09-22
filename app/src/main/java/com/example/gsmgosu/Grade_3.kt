@@ -14,7 +14,7 @@ import retrofit2.Response
 
 class Grade_3 : Fragment() {
 
-    lateinit var student : ArrayList<UserInfo>
+    var student = ArrayList<UserInfo>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
