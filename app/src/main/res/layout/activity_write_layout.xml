@@ -82,6 +82,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/summit"
             android:background="@drawable/ok_button"
             android:layout_width="match_parent"
             android:textColor="#ffffff"
