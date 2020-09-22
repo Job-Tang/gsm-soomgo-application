@@ -1,15 +1,11 @@
 package com.example.gsmgosu
 
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 
-class MyProfile : AppCompatActivity() {
-
+class WriteLayout : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_my_profile)
-
+        setContentView(R.layout.activity_write_layout)
     }
-
-
 }

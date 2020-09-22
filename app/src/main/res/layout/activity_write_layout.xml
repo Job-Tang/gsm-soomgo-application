@@ -82,15 +82,23 @@
         android:orientation="horizontal">
 
         <Button
+            android:background="@drawable/ok_button"
             android:layout_width="match_parent"
+            android:textColor="#ffffff"
             android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
             android:layout_weight="1"
+            android:textSize="15dp"
             android:text="제출" />
 
         <Button
+            android:background="@drawable/cancel_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="10dp"
+            android:textSize="15dp"
             android:text="취소" />
     </LinearLayout>
 </RelativeLayout>

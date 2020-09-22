@@ -32,10 +32,25 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         init()
+        OnClick()
     }
+    private fun OnClick(){
+        writeNotice.setOnClickListener {
 
+            val intent = Intent(this@MainActivity,WriteLayout::class.java)
+            startActivity(intent)
+        }
+        mypage_Profile.setOnClickListener {
+            val intent = Intent(this@MainActivity,MyProfile::class.java)
+            startActivity(intent)
+        }
+        gosu.setOnClickListener {
+            val intent = Intent(this@MainActivity,RegisterMaster::class.java)
+            startActivity(intent)
+        }
+
+    }
     private fun init() {
         val linearLayoutManager = LinearLayoutManager(this)
         val gridLayoutManager = GridLayoutManager(this, 4)
