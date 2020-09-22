@@ -30,7 +30,7 @@ public class SplashActivity extends Activity {
 //            }else{
             // 회원가입으로 이동
 //            }
-            startActivity(new Intent(getApplication(), MainActivity.class));
+            startActivity(new Intent(getApplication(), LoginActivity.class));
             SplashActivity.this.finish();
         }
     }

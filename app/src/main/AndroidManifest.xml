@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.gsmgosu">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,9 +15,10 @@
         <activity android:name=".WriteLayout"></activity>
         <activity android:name=".RegisterMaster" />
         <activity android:name=".LoginActivity" />
-        <activity
-            android:name=".UserSetting"
-            android:screenOrientation="portrait" />
+        <activity android:name=".UserSetting" />
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".In_Chat_Activity" />
         <activity
             android:name=".SelectGrade"
             android:screenOrientation="portrait" />
@@ -28,9 +31,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:screenOrientation="portrait" />
+        <activity android:name=".Chat_Room_Activity" />
+
     </application>
 
 </manifest>
